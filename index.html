@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immutable</title>
+</head>
+<body>
+    <h1>Immutable</h1>
+    <script src="employee.js"></script>
+    <script>
+        const address1=new Address("47", "Nagpur", "440023");
+        const address2=new Address("46", "Nagpur", "440023");
+        const employee=new ImmutableClass(
+            "Pooja Malode",
+            "12345",
+            new Date("2025-01-01"),
+            [address1, address2]
+        );
+        console.log(employee.getName());
+        console.log(employee.getId());
+        console.log(employee.getDateOfJoining());
+        console.log(employee.getAddresses());
+    </script>
+</body>
+</html>
